@@ -1,11 +1,18 @@
 <h1>Sample Table</h1>
 <table class="style">
+<div>
 	<tr>
 		<th *ngFor="let y of name">{{y.head}}</th>
+     <button (click)="delete(y.id)">Delete</button>
 	</tr>
 	<tr *ngFor="let x of name">
 		<td>{{x.id}}</td>
 		<td>{{x.userName}}</td>
 		<td>{{x.title}}</td>
+   <button (click)="delete(x.id)">Delete</button>
 	</tr>
+  </div>
+   
+   
+   
 </table>

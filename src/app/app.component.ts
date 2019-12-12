@@ -16,5 +16,15 @@ export class AppComponent implements OnInit  {
   this.fileService.getData().subscribe(res =>{this.name = res;
   console.log(res)} );
   }
+  delete(id){
+    console.log('id', id)
+for(var i=0; i < this.name.length; i++){
+  console.log('i',)
+if(this.name[i].id === id){
+  this.name.splice(i, 1);
+  console.log(this.name.splice(i, 1))
+}
+}
+  }
   
 }
